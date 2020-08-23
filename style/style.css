@@ -10,7 +10,7 @@ body {
     background-color: #1f1e1e;
     background-image: url("../images/background.jpg");
     background-attachment: fixed;
-
+    line-height: 1.4em;
 }
 
 * {
@@ -29,15 +29,25 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
-    line-height: 1.4em;
+
 }
 
 .title {
     margin: 10px auto 5px;
     -webkit-text-stroke: 0.3px #000;
+    line-height: 1em;
 }
 
 /*Nav*/
+@media (max-width: 700px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        line-height: 2.5em;
+    }
+}
+
 .nav__link {
     padding-left: 30px;
     color: #fff;
@@ -61,11 +71,23 @@ body {
     border-bottom: 1px solid #afb3b1;
 }
 
+@media (max-width: 1204px) {
+    .header-top {
+        padding: 10px 10px;
+    }
+}
 
 .header__title {
     margin-top: 100px;
+    padding: 0 10px;
     text-align: center;
     font-size: 40px;
+}
+
+@media (max-width: 705px) {
+    .header__title {
+        margin-top: 50px;
+    }
 }
 
 .header__content {
@@ -73,6 +95,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+}
+
+@media (max-width: 705px) {
+    .header__content {
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
 }
 
 .header__pic {
@@ -95,6 +125,7 @@ body {
 
 /*content-block*/
 .content-block {
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,8 +143,18 @@ body {
     border-radius: 30px;
 }
 
+.btn-grid{
+    margin-bottom: 50px;
+}
+
 .header__btn {
     margin-top: 100px;
+}
+
+@media (max-width: 705px) {
+    .header__btn {
+        margin-top: 20px;
+    }
 }
 
 .btn:hover {
@@ -132,8 +173,8 @@ body {
     border-color: #fff;
 }
 
-.btn:hover {
-    background-color: rgba(229, 236, 233, 0.1);
+.btn--white:hover {
+    background-color: rgba(246, 250, 249, 0.1);
 }
 
 .btn__link--white {
@@ -141,7 +182,7 @@ body {
 }
 
 /* Main */
-.main {
+main {
     margin-top: 100px;
     background-color: #fff;
     flex-grow: 1;
@@ -149,10 +190,71 @@ body {
 
 .main__inner {
     padding: 100px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
+
+.grid {
+    display: grid;
+    grid-template-areas: "img-1   img-2"
+        "title-1 title-2"
+        "text-1  text-2"
+        "btn-1   btn-2";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 350px);
+    grid-gap: 10px 150px;
+    justify-content: center;
+    justify-items: center;
+    align-items: baseline;
+}
+
+@media (max-width: 880px) {
+    .grid {
+        grid-template-areas: "img-1"
+                             "title-1"
+                             "text-1"
+                             "btn-1"
+                             "img-2"
+                             "title-2"
+                             "text-2"
+                             "btn-2";
+        grid-template-rows: repeat(8, auto);
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+}
+
+.img-1 {
+    grid-area: img-1;
+}
+
+.title-1 {
+    grid-area: title-1;
+}
+
+.text-1 {
+    grid-area: text-1;
+}
+
+.btn-1 {
+    grid-area: btn-1;
+}
+
+.img-2 {
+    grid-area: img-2;
+}
+
+.title-2 {
+    grid-area: title-2;
+}
+
+.text-2 {
+    grid-area: text-2;
+}
+
+.btn-2 {
+    grid-area: btn-2;
+}
+
+
 
 .main__pic {
     display: block;
@@ -184,12 +286,42 @@ body {
     text-align: center;
 }
 
+@media (max-width: 700px) {
+    .collage__inner {
+        padding: 50px;
+    }
+}
+
 .collage__content {
     padding: 50px 0;
     display: grid;
     grid-gap: 10px;
     justify-content: center;
     grid: repeat(8, 90px) / repeat(8, 90px);
+}
+
+@media (max-width: 1040px) {
+    .collage__content {
+        grid: repeat(8, 60px) / repeat(8, 60px);
+    }
+}
+
+@media (max-width: 620px) {
+    .collage__content {
+        grid: repeat(8, 50px) / repeat(8, 50px);
+    }
+}
+
+@media (max-width: 500px) {
+    .collage__content {
+        grid: repeat(8, 40px) / repeat(8, 40px);
+    }
+}
+
+@media (max-width: 430px) {
+    .collage__content {
+        grid: repeat(8, 25px) / repeat(8, 25px);
+    }
 }
 
 .collage__pic {
