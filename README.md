@@ -1,5 +1,5 @@
 # **GreePO Project**    
-GreePO project is the site of an architectural bureau. On these webpages you can find basic information about the company, its portfolio, and submit a request.  
+GreePO project is a website of an architectural bureau. On these webpages you can find basic information about the company, its portfolio, and submit a request.  
 This project is my first project on GitHub. Its main task is to practice basic skills in working with HTML, CSS, and Javascript.  
   
 
