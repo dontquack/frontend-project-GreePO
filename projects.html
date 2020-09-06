@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="images/header/pic-2.png">
+    <script src="script.js"></script>
     <title>GreePO. Projects</title>
 </head>
 
@@ -15,17 +16,26 @@
         <a class="btn__link btn__link--fixed" href="#">Up</a>
     </div>
 
-    <script>
-        var age = prompt("How old are you?");
-        if (age == null)
-            console.log("Age not specified")
-        else
-            document.write("You are " + age);
-    </script>
-
     <!-- Floating button -->
     <div class="btn--fixed btn--fixed--right">
-        <a class="btn__link btn__link--fixed" href="#">Submit a request</a>
+        <a class="btn__link btn__link--fixed" onclick="openForm()">Submit a request</a>
+    </div>
+
+    <div id="blackout"></div>
+
+    <div class="form-popup" id="popup">
+        <form action="#" class="form-container">
+            <button type="button" class="btn btn__link btn-close" onclick="closeForm()"><b>+</b></button>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Your name" name="name" required>
+            <label for="email"><b>E-mail</b></label>
+            <input type="email" placeholder="Your e-mail" name="email" required>
+            <label for="name"><b>What do we have to work with?</b></label>
+            <input type="text" placeholder="The subject of the work" name="name" required>
+            <label for="name"><b>Message</b></label>
+            <input type="text" placeholder="Your message" name="name" required>
+            <button type="submit" class="btn btn__link btn-popup"><b>Submit a request</b></button>
+        </form>
     </div>
 
     <!-- Header -->
@@ -495,7 +505,6 @@
         </div>
     </div>
 
-
-</body>
+   </body>
 
 </html>

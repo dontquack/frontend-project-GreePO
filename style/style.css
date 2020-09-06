@@ -230,8 +230,8 @@ body {
     border-radius: 15px;
 
     background-color: #000;
-    
-    z-index: 1000;
+
+    z-index: 100;
 }
 
 .btn--fixed:hover {
@@ -610,6 +610,129 @@ main {
 }
 
 /* End-Gallery */
+
+
+#blackout {
+    display: none;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 70%;
+    z-index: 200;
+}
+
+/* Form-popup */
+.form-popup {
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 999;
+}
+
+@media (max-width: 600px){
+    .form-popup{
+        top: 20%;
+        left: 30%;
+        transform: translate(-20%, -20%);
+    }
+}
+
+.form-container {
+    max-width: 600px;
+    padding: 5px 20px 40px;
+    background-color: #1f1e1e;
+    border-radius: 50px;
+}
+
+.form-container input[type=text],
+.form-container input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 30px;
+    border: none;
+    background: #f1f1f1;
+    font-size: 15px;
+}
+
+.form-container input[type=text]:focus,
+.form-container input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.btn-popup {
+    font-size: 15px;
+    width: 40%;
+}
+
+.btn-close {
+    width: 40px;
+    margin-right: 0;
+
+    border-radius: 30px;
+    font-size: 15px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* End-Form-popup */
+
+/* Modal window for the staff */
+.form-title{
+    margin: 10px auto;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.employee-photo{
+    width: 100px;
+    border-radius: 50px;
+}
+.form-staff__content{
+    margin: 0 10px;
+    display: grid;
+    grid-template-areas: "photo-1 discrp-1"
+                         "photo-2 discrp-2"
+                         "photo-3 discrp-3"
+                         "photo-4 discrp-4";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: left;
+    align-items: center;
+}
+
+.form-staff__position{
+    font-size: 13px;
+    color: #66bd99;
+}
+
+.photo-1{
+    grid-area: photo-1;
+}
+
+discrp-1{
+    grid-area: discrp-1;
+}
+
+/* Modal-window-for-Working-Stages  */
+.form-stages__item{
+    margin: 20px 20px;
+    text-align: justify;
+    color: #9db3af;
+}
+
 
 /* Footer */
 .footer {
