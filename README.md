@@ -5,11 +5,11 @@ This project is my first project on GitHub. Its main task is to practice basic s
 
 ### **The project used:**    
 :white_check_mark: Flexible Box Layout Module;  
-:white_check_mark: the Grid Layout;
-:white_check_mark: a bit of JavaScript animation;       
-
-### **In the near future, the project expects:**  
-:black_square_button: more adaptability;
+:white_check_mark: the Grid Layout;  
+:white_check_mark: a bit of JavaScript animation.      
+ 
+### **In the near future, the project expects:**   
+:black_square_button: more adaptability;  
 :black_square_button: more interesting Projects section design (but I'm not sure?). 
 
 *I suggest you watch **a small preview of the GreePO**:* 
